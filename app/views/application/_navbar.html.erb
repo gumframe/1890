@@ -1,0 +1,35 @@
+<% if current_page?(controller:'application') && (current_page?(action:'index')) %>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <img src="/assets/logo-white.svg" href="/" height="200" width="150"/>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <strong><%= link_to "contact us", contact_path, class: "button has-text-weight-semibold" %></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<% else %>
+
+<nav class="navbar-contact" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <a class="navbar-center" href="/">
+      <img src="/assets/logo-black.svg" height="200" width="150"/>
+    </a>
+  </div>
+</nav>
+
+<% end %>
